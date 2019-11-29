@@ -1,0 +1,20 @@
+<h1 class="title">{{title}}</h1>
+{{#if registrations.length}}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email
+            </tr>
+        </thead>
+        {{#each registrations}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+            </tr>
+        {{/each}}
+    </th>
+    </table>
+{{ else }}
+    <p>No registrations</p>
+{{/if}}

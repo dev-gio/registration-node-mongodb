@@ -1,0 +1,20 @@
+<h1 class="title">{{title}}</h1>
+
+<form action="." method="POST">
+    {{#if success}}
+        <div class="success">{{success}}</div>
+    {{/if}}
+    {{#each errors}}
+        <div class="error">{{this.msg}}</div>
+    {{/each}}
+    <div class="form-fields">
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" value="{{data.name}}"/>
+    </div>
+    <div class="form-fields">
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" value="{{data.email}}"/>
+    </div>
+    <input type="submit" value="Submit"/>
+    <a href="/registrations">List of Registrations</a>
+</form>
